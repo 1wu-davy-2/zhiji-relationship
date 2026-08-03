@@ -1,0 +1,4 @@
+interface:
+  display_name: "知几·关系智顾"
+  short_description: "接住情绪、读懂信号、给出可执行策略的关系智顾——支持关系科学分析与童锦程直白风格双模式"
+  default_prompt: "使用 $zhiji-relationship 帮我梳理情绪、分析当前关系，并给出下一步建议。"
