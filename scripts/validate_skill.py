@@ -18,13 +18,23 @@ SKILL_MAX_LINES = 150
 SKILL_MAX_CHARACTERS = 5_000
 SKILL_MAX_APPROX_TOKENS = 4_500
 
-# Populate these tuples as the skill's required reference files become established.
-# Each entry is a filename relative to its respective references/ sub-directory.
+# Required reference files that define the three-persona runtime contract.
+# Knowledge and practical documents are covered by the count checks below.
 REQUIRED_KNOWLEDGE: tuple[str, ...] = ()
 REQUIRED_PRACTICAL: tuple[str, ...] = ()
+REQUIRED_PERSPECTIVES: tuple[str, ...] = (
+    "references/perspective/goutoujunshi/SKILL.md",
+    "references/perspective/tong-jincheng/SKILL.md",
+    "references/perspective/fengge/SKILL.md",
+)
+REQUIRED_SUPPORTING: tuple[str, ...] = (
+    "references/persona-routing.md",
+)
 
 # Scenario files that must be present under tests/ in full (non-runtime) mode.
-REQUIRED_SCENARIOS: tuple[str, ...] = ()
+REQUIRED_SCENARIOS: tuple[str, ...] = (
+    "combined-integration-scenarios.md",
+)
 
 
 def require(path: str) -> Path:
@@ -141,8 +151,9 @@ def validate_inventory(runtime_only: bool) -> None:
     for filename in REQUIRED_PRACTICAL:
         require(f"references/practical/{filename}")
 
-    # --- Required perspective sub-skill (always checked, even in --runtime mode) ---
-    require("references/perspective/tong-jincheng/SKILL.md")
+    # --- Required perspective and routing files (always checked) ---
+    for path in REQUIRED_PERSPECTIVES + REQUIRED_SUPPORTING:
+        require(path)
 
     # --- Test scenario files (full mode only) ---
     if not runtime_only:
@@ -185,13 +196,16 @@ def validate_routes_and_regressions(runtime_only: bool) -> None:
     scenarios = ROOT / "tests/combined-integration-scenarios.md"
     if scenarios.is_file():
         content = scenarios.read_text(encoding="utf-8")
-        # These markers assert that the three critical cross-skill interaction paths
-        # are exercised: style activation, safety taking precedence over style, and
-        # correct dual-routing through both knowledge and perspective branches.
+        # These markers assert that activation, safety precedence, single-persona,
+        # combination, and knowledge/perspective routing paths are exercised.
         coverage_markers = (
             "style-activation",
             "safety-over-style",
             "dual-routing-correct",
+            "single-persona-routing",
+            "three-persona-routing",
+            "custom-routing",
+            "fengge-activation",
         )
         for marker in coverage_markers:
             if marker not in content:
@@ -279,7 +293,7 @@ def validate_markdown_links() -> None:
 # ---------------------------------------------------------------------------
 
 def validate_placeholders() -> None:
-    """Fail if any tracked text file still contains a [TODO] template placeholder."""
+    """Fail if any tracked text file still contains the template marker TODO."""
     for path in ROOT.rglob("*"):
         if not path.is_file() or ".git" in path.parts:
             continue

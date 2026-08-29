@@ -1,6 +1,6 @@
 # License
 
-本项目 **知几·关系智顾（zhiji-relationship）** 是由两个上游项目融合而成的衍生作品。
+本项目 **知几·关系智顾（zhiji-relationship）** 是由多个上游项目和公开资料整理而成的独立衍生作品。
 
 本项目遵从最严格的上游许可证约束，即 **PolyForm Noncommercial License 1.0.0**，**仅限非商业用途**使用、分发或修改。
 
@@ -8,6 +8,7 @@
 
 - `LICENSE.goutoujunshi` — 狗头军师（goutoujunshi）：PolyForm Noncommercial License 1.0.0，Copyright 2026 powerycy
 - `LICENSE.tong-jincheng` — 童锦程.skill（tong-jincheng-skill）：MIT License，Copyright (c) 2026 hotcoffeeshake
+- 峰哥视角的参考项目：MIT 许可来源及其说明见 `THIRD-PARTY-NOTICES.md`
 
 详见 `NOTICE.md`。
 
