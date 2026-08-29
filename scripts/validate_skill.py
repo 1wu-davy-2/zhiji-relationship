@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the distributable zhiji-relationship skill without third-party packages."""
+"""Validate the distributable zhiji skill without third-party packages."""
 
 from __future__ import annotations
 
@@ -71,8 +71,8 @@ def validate_frontmatter() -> None:
     name = name_match.group(1).strip() if name_match else ""
     description = description_match.group(1).strip() if description_match else ""
 
-    # Skill name must be exactly "zhiji-relationship" and match the slug pattern.
-    if name != "zhiji-relationship" or not re.fullmatch(r"[a-z0-9-]{1,64}", name):
+    # Skill name must be exactly "zhiji" and match the slug pattern.
+    if name != "zhiji" or not re.fullmatch(r"[a-z0-9-]{1,64}", name):
         ERRORS.append(f"invalid skill name: {name!r}")
     if not description or len(description) > 1024 or "<" in description or ">" in description:
         ERRORS.append("description is empty, too long, or contains angle brackets")
@@ -162,8 +162,8 @@ def validate_inventory(runtime_only: bool) -> None:
 
     # --- Agent prompt must reference the skill by variable name ---
     agent = ROOT / "agents/openai.yaml"
-    if agent.is_file() and "$zhiji-relationship" not in agent.read_text(encoding="utf-8"):
-        ERRORS.append("agents/openai.yaml default prompt must mention $zhiji-relationship")
+    if agent.is_file() and "$zhiji" not in agent.read_text(encoding="utf-8"):
+        ERRORS.append("agents/openai.yaml default prompt must mention $zhiji")
 
 
 # ---------------------------------------------------------------------------
@@ -328,7 +328,7 @@ def main() -> int:
             print(f"ERROR: {error}")
         return 1
 
-    print("zhiji-relationship validation passed")
+    print("zhiji validation passed")
     return 0
 
 

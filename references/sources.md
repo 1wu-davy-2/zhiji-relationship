@@ -6,7 +6,7 @@
 
 ## 参考项目
 
-### 1wu-davy-2/fengge-skill（纯血姊妹仓库）
+### 峰哥（fengge-skill，纯血姊妹仓库）
 
 - 地址：https://github.com/1wu-davy-2/fengge-skill
 - 定位：独立的纯峰哥版本；本仓库将其中适用于关系分析的现实观察方法整合为第三人格，同时保留三人格组合与会诊能力。

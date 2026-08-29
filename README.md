@@ -11,7 +11,7 @@
 
 **一个入口，三种视角。**
 
-由 [狗头军师（goutoujunshi）](https://github.com/powerycy/goutoujunshi) 的关系科学分析内核、[童锦程.skill（tong-jincheng-skill）](https://github.com/hotcoffeeshake/tong-jincheng-skill) 的直白人性洞察，以及峰哥公开内容整理出的现实观察视角融合而成。峰哥视角同时维护有独立的纯血版本：[fengge-skill](https://github.com/1wu-davy-2/fengge-skill)。
+由 [狗头军师（goutoujunshi）](https://github.com/powerycy/goutoujunshi) 的关系科学分析内核、[童锦程.skill（tong-jincheng-skill）](https://github.com/hotcoffeeshake/tong-jincheng-skill) 的直白人性洞察，以及 [峰哥（fengge-skill）](https://github.com/1wu-davy-2/fengge-skill) 的现实观察视角融合而成。
 
 </div>
 
@@ -31,7 +31,7 @@
 
 三种视角来自公开资料整理，不代表现实人物本人，不替用户读心，也不保证追到某个具体的人。安全、同意、隐私和可核验事实始终优先于表达风格。
 
-> 只想使用峰哥视角时，请安装独立仓库 [fengge-skill](https://github.com/1wu-davy-2/fengge-skill)；本仓库保留三人格会诊、单人格调用和自定义组合能力。
+> 只想使用峰哥视角时，请安装独立仓库 [峰哥（fengge-skill）](https://github.com/1wu-davy-2/fengge-skill)；本仓库保留三人格会诊、单人格调用和自定义组合能力。
 
 ## 三人格架构
 
@@ -79,16 +79,16 @@
 
 ### 1. 安装
 
-仓库名是 `zhiji-relationship`，Skill 的调用名是 `zhiji-relationship`。使用 SSH 安装到 Codex 技能目录：
+仓库名是 `zhiji-relationship`，Skill 的调用名是 `zhiji`。使用 SSH 安装到 Codex 技能目录：
 
 ```bash
-git clone git@github.com:1wu-davy-2/zhiji-relationship.git ~/.codex/skills/zhiji-relationship
+git clone git@github.com:1wu-davy-2/zhiji-relationship.git ~/.codex/skills/zhiji
 ```
 
 Windows PowerShell：
 
 ```powershell
-git clone git@github.com:1wu-davy-2/zhiji-relationship.git "$env:USERPROFILE\.codex\skills\zhiji-relationship"
+git clone git@github.com:1wu-davy-2/zhiji-relationship.git "$env:USERPROFILE\.codex\skills\zhiji"
 ```
 
 也可以使用 Codex 中的 `$skill-installer` 安装公开 GitHub 仓库：
@@ -97,14 +97,14 @@ git clone git@github.com:1wu-davy-2/zhiji-relationship.git "$env:USERPROFILE\.co
 $skill-installer install https://github.com/1wu-davy-2/zhiji-relationship
 ```
 
-安装后重新打开 Codex 或开启新任务，然后输入 `$zhiji-relationship`。Skill 通常从 `$CODEX_HOME/skills/`（未设置时为 `~/.codex/skills/`）中发现。
+安装后重新打开 Codex 或开启新任务，然后输入 `$zhiji`。Skill 通常从 `$CODEX_HOME/skills/`（未设置时为 `~/.codex/skills/`）中发现。
 
 ### 2. 默认分析
 
 未指定人格时，使用狗头军师共同内核：
 
 ```text
-使用 $zhiji-relationship 帮我分析：她说想慢慢来，我还要不要继续？
+使用 $zhiji 帮我分析：她说想慢慢来，我还要不要继续？
 ```
 
 可以直接讲故事，也可以补充：关系阶段、最近 3 至 5 次互动、谁主动、邀约是否兑现、你的目标和当前情绪。未知信息可以留空，不需要为了分析猜测一个 MBTI 或星座结论。
@@ -264,7 +264,7 @@ tests/combined-integration-scenarios.md   # 单人格与组合人格集成场景
 
 - 狗头军师（goutoujunshi）：PolyForm Noncommercial，Copyright 2026 powerycy
 - 童锦程.skill（tong-jincheng-skill）：MIT，Copyright (c) 2026 hotcoffeeshake
-- 峰哥视角：基于公开资料和相关开源项目的独立改写，来源与边界见 [references/sources.md](references/sources.md)
+- [峰哥（fengge-skill）](https://github.com/1wu-davy-2/fengge-skill)：基于公开资料和相关开源项目的独立改写，来源与边界见 [references/sources.md](references/sources.md)
 
 本项目不代表任何上游作者、现实人物或相关团队。
 

@@ -4,7 +4,7 @@ This project is an independent three-person adaptation for personal use. It does
 not claim to represent Zhou Lifeng, Fengge, any upstream author, or any related
 company. No complete Fengge upstream skill file or asset is bundled here.
 
-## 1wu-davy-2/fengge-skill
+## 峰哥（fengge-skill）纯血版本
 
 Source: https://github.com/1wu-davy-2/fengge-skill
 

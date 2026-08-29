@@ -26,7 +26,7 @@ Required Notice: Copyright 2026 powerycy.
 
 峰哥视角是基于公开内容、公开报道和相关开源整理的独立改写，不冒充周丽峰本人，也不把网络语录当作事实或行动指令。
 
-### 纯血版本：1wu-davy-2/fengge-skill
+### 峰哥（fengge-skill）纯血版本
 
 - 仓库：https://github.com/1wu-davy-2/fengge-skill
 - 定位：本项目中峰哥关系观察视角的独立姊妹仓库，单独提供纯峰哥版本。
