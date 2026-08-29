@@ -206,6 +206,7 @@ def validate_routes_and_regressions(runtime_only: bool) -> None:
             "three-persona-routing",
             "custom-routing",
             "fengge-activation",
+            "init-onboarding",
         )
         for marker in coverage_markers:
             if marker not in content:

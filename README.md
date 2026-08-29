@@ -102,7 +102,32 @@ python "$env:USERPROFILE\.codex\skills\.system\skill-installer\scripts\install-s
 
 安装后重新打开 Codex 或开启新任务，然后输入 `$zhiji`。Skill 通常从 `$CODEX_HOME/skills/`（未设置时为 `~/.codex/skills/`）中发现。
 
-### 2. 默认分析
+### 2. 第一次使用：初始化 / 使用教程
+
+不熟悉用法时，直接把下面任一条发给 AI：
+
+```text
+$zhiji /init
+$zhiji 使用教程
+```
+
+AI 会先告诉你它能做什么，再给出默认分析、单人格、三人会诊和自定义搭配的示例。你不需要先填写 MBTI、星座或完整关系档案，直接讲故事也可以。
+
+教程输出示例：
+
+```text
+知几：这是一个帮助你梳理关系、识别行为信号和决定下一步的 Skill。
+
+你可以这样开始：
+1. 使用 $zhiji 分析：她说想慢慢来，我还要不要继续？
+2. 只用峰哥分析：这段关系的现实信号是什么？
+3. 三人会诊：她对我有好感，但一直不愿确定关系。
+4. 自定义搭配：狗头军师负责事实，峰哥负责反向核验，童锦程负责改写话术。
+
+也可以输入“退出人格模式”或“只保留狗头军师”切换分析方式。
+```
+
+### 3. 默认分析
 
 未指定人格时，使用狗头军师共同内核：
 
@@ -112,7 +137,7 @@ python "$env:USERPROFILE\.codex\skills\.system\skill-installer\scripts\install-s
 
 可以直接讲故事，也可以补充：关系阶段、最近 3 至 5 次互动、谁主动、邀约是否兑现、你的目标和当前情绪。未知信息可以留空，不需要为了分析猜测一个 MBTI 或星座结论。
 
-### 3. 单人格分析
+### 4. 单人格分析
 
 ```text
 只用狗头军师分析：我们最近是不是投入失衡？
@@ -122,7 +147,7 @@ python "$env:USERPROFILE\.codex\skills\.system\skill-installer\scripts\install-s
 
 单人格输出包括：核心判断、事实与未知、一个行动，以及观察窗口或停止条件。不会把其他人格的意见伪装成当前视角的结论。
 
-### 4. 两人格组合
+### 5. 两人格组合
 
 ```text
 狗头军师 + 峰哥：帮我判断这段暧昧关系要不要继续。
@@ -132,7 +157,7 @@ python "$env:USERPROFILE\.codex\skills\.system\skill-installer\scripts\install-s
 
 两人格会共享同一份事实底稿，再分别给判断，最后合并为一条行动，避免重复输出三套互相竞争的建议。
 
-### 5. 三人会诊
+### 6. 三人会诊
 
 ```text
 三人会诊：她说对我有好感，但现在不想确定关系，我已经连续主动两周了。
@@ -146,7 +171,7 @@ python "$env:USERPROFILE\.codex\skills\.system\skill-installer\scripts\install-s
 4. 峰哥的现实核验和成本判断
 5. 共识、分歧、首选行动、观察窗口和停止条件
 
-### 6. 自定义职责、顺序和权重
+### 7. 自定义职责、顺序和权重
 
 ```text
 自定义搭配：狗头军师负责事实和风险，峰哥负责反转判断，童锦程负责改写一条可发送话术。
@@ -158,7 +183,7 @@ python "$env:USERPROFILE\.codex\skills\.system\skill-installer\scripts\install-s
 
 百分比只调整篇幅和侧重点，不代表某个结论的概率。职责分配也不能改变事实标准、安全边界或对方的自主权。
 
-### 7. 切换或关闭视角
+### 8. 切换或关闭视角
 
 ```text
 只保留狗头军师。

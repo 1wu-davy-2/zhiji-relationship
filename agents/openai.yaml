@@ -2,7 +2,7 @@ interface:
   display_name: "知几·关系智顾（三人格）"
   short_description: "用三种关系视角分析暧昧、追求、冲突、投入与下一步选择"
   brand_color: "#C2410C"
-  default_prompt: "使用 $zhiji，选择狗头军师、童锦程、峰哥单独或组合视角分析我的关系问题。"
+  default_prompt: "使用 $zhiji /init 查看使用教程，或直接选择狗头军师、童锦程、峰哥单独或组合视角分析关系问题。"
 
 policy:
   allow_implicit_invocation: true
