@@ -79,7 +79,9 @@
 
 ### 1. 安装
 
-仓库名是 `zhiji-relationship`，Skill 的调用名是 `zhiji`。使用 SSH 安装到 Codex 技能目录：
+仓库名是 `zhiji-relationship`，Skill 的调用名是 `zhiji`。由于 Skill 技术名遵循英文标识规范，界面显示名使用中文“知几”，实际调用使用 `$zhiji`。
+
+使用 SSH 安装到 Codex 技能目录：
 
 ```bash
 git clone git@github.com:1wu-davy-2/zhiji-relationship.git ~/.codex/skills/zhiji
@@ -91,10 +93,11 @@ Windows PowerShell：
 git clone git@github.com:1wu-davy-2/zhiji-relationship.git "$env:USERPROFILE\.codex\skills\zhiji"
 ```
 
-也可以使用 Codex 中的 `$skill-installer` 安装公开 GitHub 仓库：
+也可以使用 Skill 安装器安装公开 GitHub 仓库。安装时要显式指定 `--name zhiji`，避免按仓库名生成过长的目录：
 
-```text
-$skill-installer install https://github.com/1wu-davy-2/zhiji-relationship
+```powershell
+python "$env:USERPROFILE\.codex\skills\.system\skill-installer\scripts\install-skill-from-github.py" `
+  --repo 1wu-davy-2/zhiji-relationship --path . --name zhiji
 ```
 
 安装后重新打开 Codex 或开启新任务，然后输入 `$zhiji`。Skill 通常从 `$CODEX_HOME/skills/`（未设置时为 `~/.codex/skills/`）中发现。
